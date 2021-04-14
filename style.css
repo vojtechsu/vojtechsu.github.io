@@ -68,3 +68,47 @@ footer {
   margin-top: 50px;
   text-align: center;
 }
+
+/*SAGEMATH*/
+/* Style the tab */
+.tab {
+ /*overflow: hidden;*/
+ /*border: 1px solid #ccc;*/
+ background-color: #FFFFFF;
+}
+
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+ background-color: #B6BBBF;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+ background-color: #B6BBBF;
+ color: #FFFFFF;
+}
+
+/* Style the tab content */
+.tabcontent {
+ display: None;
+ padding: 6px 6px;
+ border-top: none;
+}
+
+
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: #FFFFFF;
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-left: 26px;
+  padding-bottom: 40px;
+  transition: 0.3s;
+  font-size: 15px;
+  color: #B6BBBF;
+}

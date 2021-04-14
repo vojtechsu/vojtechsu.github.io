@@ -10,9 +10,33 @@
   <link rel="stylesheet" href="vendor/normalize.min.css">
 
   <link rel="stylesheet" href="vendor/milligram.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script>
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
 </head>
 
-<body>
+<body onload="document.getElementById('defaultOpen').click();">
 
   <header>
     <nav>
@@ -23,7 +47,32 @@
     </nav>
   </header>
 <center>
-Nothing here yet...
+  As part of my thesis, I have started working on implementation of isogenies in <a href="https://www.sagemath.org/">SageMath</a>.
+  <br> First, simple version can be found on <a href="https://github.com/vojtechsu/isogenies">github<i class="fa fa-github"></i></a>. Here's a little preview:
+  <br>
+  <br>
+  <br>
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'end') " id="defaultOpen">Endomorphism</button>
+    <button class="tablinks" onclick="openCity(event, 'isog')">Isogeny</button>
+    <button class="tablinks" onclick="openCity(event, 'hor')">Action</button>
+    <button class="tablinks" onclick="openCity(event, 'vol')">Volcano</button>
+  </div>
+ <!-- Tab content -->
+ <div id="end" class="tabcontent">
+   <img src="img/endomorphism_guide.jpg" alt="oops" >
+ </div>
+
+ <div id="isog" class="tabcontent">
+   <img src="img/isogeny_guide.jpg" alt="oops">
+ </div>
+
+ <div id="hor" class="tabcontent">
+   <img src="img/horizontal_guide.jpg" alt="oops">
+ </div>
+ <div id="vol" class="tabcontent">
+   <img src="img/volcano_guide.jpg" alt="oops">
+ </div>
 </center>
   </main>
 
